@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        Patient Name:
+        <span class="banner-value" id="patient_name">..</span>
+        Gender:
+        <span class="banner-value" id="gender">..</span>
+        DOB:
+        <span class="banner-value" id="dob">..</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-overview">
+        <div class="small-card">
+          <div>Height</div>
+          <div class="ob-value" id="height">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Weight</div>
+          <div class="ob-value" id="weight">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Systolic Blood Pressure</div>
+          <div class="ob-value" id="sys">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Diastolic Blood Pressure</div>
+          <div class="ob-value" id="dia">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>LDL</div>
+          <div class="ob-value" id="ldl">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>HDL</div>
+          <div class="ob-value" id="hdl">undefined</div>
+        </div>
+      </div>
+
+      <div class="med-card">
+        <div class="card2">
+          <div class="title">
+            Current Medications
+          </div>
+        <!-- <span>  <input class="annotation-box" id="annotation"> -->
+          <!-- <button class="annotation-button" id="add">Add</button></span> -->
+          <!-- <div class="annotations"> -->
+          <!-- Latest Annotation -->
+          <!-- <li id="note">No annotations</li> -->
+          <!-- </div> -->
+          <ul id="med_list"></ul>
+        </div>
+
+        <div class="card2">
+          <div class="title">
+            Current Conditions
+          </div>
+          <ul id="condition_list"></ul>
+        </div>
+      </div>
+
+      <div class="big-card">
+        <div class="card1">
+          <div class="title">
+            Similar Patients
+          </div>
+        <!-- <span>  <input class="annotation-box" id="annotation"> -->
+          <!-- <button class="annotation-button" id="add">Add</button></span> -->
+          <!-- <div class="annotations"> -->
+          <!-- Latest Annotation -->
+          <!-- <li id="note">No annotations</li> -->
+          <!-- </div> -->
+          <ul id="similar_list">Loading...</ul>
+        </div>
+
+        <div class="card1">
+          <div class="title">
+            Conditions of Risk
+          </div>
+          <ul id="risk_list">Loading...</ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+  <script src='./lib/js/priority-queue.js'></script>
+<!--   <script src="./lib/js/get-data.js"></script>-->
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+  <script src="./lib/js/get-data-test.js"></script>
+</body>
+
+</html>
